@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="shortcut icon" href="/public/image/mic.png" type="image/x-icon">
+    <link rel="stylesheet" href="/public/css/index.css">
+    <title>Mic'd - Just Talk</title>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="main">
+        <div class="main-section">
+            <button class="actionBtns" id="joinBtn">
+                <p>Join Room</p>
+            </button>
+            <button class="actionBtns" id="createBtn">
+                <p>Create Room</p>
+            </button>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-content join-modal">
+            <div class="modal-header">
+                <h1>Join Room</h1>
+            </div>
+            <div class="modal-body">
+                <form id="join-form">
+                    <input type="text" name="userName" placeholder="Your name">
+                    <input type="text" name="roomCode" placeholder="Enter Room Code" maxlength="6">
+                    <div class="modal-submit">
+                        <button id="joinRoomBtn" class="actionBtns c-dark">
+                            <p>Find Room</p>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-content create-modal">
+            <div class="modal-header">
+                <h1>Create A Room</h1>
+            </div>
+            <div class="modal-body">
+                <form id="create-form">
+                    <input type="text" name="userName" placeholder="Your name">
+                    <input type="text" name="roomName" placeholder="Enter Room Name" maxlength="10">
+                    <div class="modal-submit">
+                        <button id="createRoomBtn" class="actionBtns c-dark">
+                            <p>Create Room</p>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/public/js/landing.js"></script>
+</body>
+</html>
