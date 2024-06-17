@@ -1,5 +1,6 @@
 
 // Import deps.
+require('dotenv').config();
 const express = require('express');
 const socketIo = require('socket.io');
 const { join } = require('path');
@@ -14,8 +15,11 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
 
+const USERNAME = process.env.USERNAME
+const PASSWORD = process.env.PASSWORD
 
-const uri = "mongodb+srv://echo_admin:echoAdmin@cluster0.bagkada.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
+const uri = `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.bagkada.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
 
 
 // app.use(express.json());
